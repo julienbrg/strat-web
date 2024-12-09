@@ -30,33 +30,31 @@ export default function Header() {
 
   return (
     <Box as="header" py={4} position="fixed" w="100%" top={0} zIndex={10}>
-      <Container maxW="container.xl">
-        <Flex justify="space-between" align="center">
-          <Image 
-            src="/stratLogoWhitepng.png" 
-            alt="Strat Logo"
-            height="32px"
-            objectFit="contain"
-          />
-          {!isConnected ? (
-            <Button
-              {...buttonStyles}
-              onClick={handleConnect}
-              size="sm"
-            >
-              Login
-            </Button>
-          ) : (
-            <Button
-              {...buttonStyles}
-              onClick={handleDisconnect}
-              size="sm"
-            >
-              Logout
-            </Button>
-          )}
-        </Flex>
-      </Container>
+      <Flex justify="space-between" align="center" px={4}>
+        <Image 
+          src="/stratLogoWhitepng.png" 
+          alt="Strat Logo"
+          height="32px"
+          objectFit="contain"
+        />
+        {!isConnected ? (
+          <Button
+            {...buttonStyles}
+            onClick={handleConnect}
+            size="sm"
+          >
+            Login
+          </Button>
+        ) : (
+          <Button
+            {...buttonStyles}
+            onClick={handleDisconnect}
+            size="sm"
+          >
+            Logout
+          </Button>
+        )}
+      </Flex>
     </Box>
   )
 }
