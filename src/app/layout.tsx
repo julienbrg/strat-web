@@ -2,7 +2,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import ContextProvider from '@/context'
 import Header from '@/components/Header'
-import { Box } from '@chakra-ui/react'  // Add this import
+import { Box } from '@chakra-ui/react'
 import { metadata } from './metadata'
 
 const inter = Inter({ subsets: ['latin'] })
