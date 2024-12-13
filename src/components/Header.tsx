@@ -42,23 +42,34 @@ export default function Header() {
             _hover={{ opacity: 0.9 }}
           />
         </Link>
-        {!isConnected ? (
-          <Button
-            {...buttonStyles}
-            onClick={handleConnect}
-            size="sm"
-          >
-            Login
-          </Button>
-        ) : (
-          <Button
-            {...buttonStyles}
-            onClick={handleDisconnect}
-            size="sm"
-          >
-            Logout
-          </Button>
-        )}
+        <Flex gap={2} align="center">
+          {!isConnected ? (
+            <Button
+              {...buttonStyles}
+              onClick={handleConnect}
+              size="sm"
+            >
+              Login
+            </Button>
+          ) : (
+            <>
+              <Box 
+                transform="scale(0.85)"
+                transformOrigin="right center"
+              >
+                <appkit-network-button />
+              </Box>
+              <Button
+                {...buttonStyles}
+                onClick={handleDisconnect}
+                size="sm"
+                ml={4}
+              >
+                Logout
+              </Button>
+            </>
+          )}
+        </Flex>
       </Flex>
     </Box>
   )
