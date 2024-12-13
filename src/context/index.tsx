@@ -2,7 +2,19 @@
 
 import { createAppKit } from '@reown/appkit/react'
 import { EthersAdapter } from '@reown/appkit-adapter-ethers'
-import { optimism } from '@reown/appkit/networks'
+import {
+  optimism,
+  zksync,
+  base,
+  arbitrum,
+  gnosis,
+  polygon,
+  polygonZkEvm,
+  mantle,
+  celo,
+  avalanche,
+  degen,
+} from '@reown/appkit/networks'
 import { type ReactNode, memo } from 'react'
 import { ChakraProvider, extendTheme } from '@chakra-ui/react'
 
@@ -16,7 +28,17 @@ const ethersAdapter = new EthersAdapter()
 createAppKit({
   adapters: [ethersAdapter],
   projectId,
-  networks: [optimism],
+  networks: [optimism,
+    zksync,
+    base,
+    arbitrum,
+    gnosis,
+    polygon,
+    polygonZkEvm,
+    mantle,
+    celo,
+    avalanche,
+    degen,],
   metadata: {
     name: 'Strat',
     description: 'Building Web3 since 2013',
