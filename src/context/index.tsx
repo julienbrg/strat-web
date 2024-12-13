@@ -21,7 +21,7 @@ createAppKit({
     name: 'Strat',
     description: 'Building Web3 since 2013',
     url: 'https://strat.cc',
-    icons: ['https://bafkreiftbdr3sjx65363yqhp226wby3gmyrbs23cno7zanjlkcqfbizfsq.ipfs.w3s.link/'] // strat logo
+    icons: ['https://bafkreiftbdr3sjx65363yqhp226wby3gmyrbs23cno7zanjlkcqfbizfsq.ipfs.w3s.link/']
   },
   enableEIP6963: true,
   enableCoinbase: true
